@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #fef6f0;
+  }
+  button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+<h1>Happy Birthday, Măriuca! 🎉</h1>
+<p>Here’s your special letter:</p>
+<div style="border: 2px solid #ffccaa; padding: 20px; background-color: #fff3e0; display:inline-block; text-align:left;">
+<p>Dear Maria,</p>
+<p>We are always gonna be on your team!</p>
+<p>Hope your day is amazing! 💛</p>
+</div>
+
+<h2>Are we gonna be friends forever?</h2>
+<button id="yesBtn" onclick="goNext()">Yes</button>
+<button id="noBtn">No</button>
+
+<script>
+const noBtn = document.getElementById('noBtn');
+noBtn.addEventListener('mouseover', () => {
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = x + 'px';
+    noBtn.style.top = y + 'px';
+});
+
+function goNext() {
+    document.body.innerHTML = `
+      <h1>Yay! Friends forever! 💖</h1>
+      <img src="https://imgur.com/a/mJLWjWq" alt="Us" style="max-width:90%; border-radius:10px;">
+      <p>Happy Birthday again! 🎂</p>
+    `;
+}
+</script>
+</body>
+</html>
